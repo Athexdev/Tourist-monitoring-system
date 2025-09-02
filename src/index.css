@@ -17,52 +17,61 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 223 47% 11%;
 
-    --primary: 0 84% 50%;
+    --primary: 339 90% 51%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 96%;
-    --secondary-foreground: 223 47% 11%;
+    --secondary: 200 98% 95%;
+    --secondary-foreground: 339 90% 51%;
 
-    --muted: 220 13% 96%;
+    --muted: 200 98% 95%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 220 13% 91%;
-    --accent-foreground: 223 47% 11%;
+    --accent: 280 100% 95%;
+    --accent-foreground: 339 90% 51%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 0 84% 50%;
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 339 90% 51%;
 
-    /* Safety System Colors */
-    --emergency: 0 84% 50%;
+    /* Vibrant Safety System Colors */
+    --emergency: 0 100% 67%;
     --emergency-foreground: 0 0% 100%;
-    --warning: 45 93% 47%;
+    --warning: 45 100% 60%;
     --warning-foreground: 0 0% 100%;
-    --success: 142 71% 45%;
+    --success: 142 100% 50%;
     --success-foreground: 0 0% 100%;
-    --authority: 213 94% 68%;
+    --authority: 213 100% 70%;
     --authority-foreground: 0 0% 100%;
-    --safe-zone: 142 71% 45%;
-    --risk-zone: 45 93% 47%;
-    --danger-zone: 0 84% 50%;
+    --info: 200 100% 60%;
+    --info-foreground: 0 0% 100%;
+    --vibrant-purple: 280 100% 70%;
+    --vibrant-orange: 25 100% 60%;
+    --vibrant-cyan: 180 100% 60%;
 
-    /* Gradients */
-    --gradient-emergency: linear-gradient(135deg, hsl(0 84% 50%), hsl(0 84% 60%));
-    --gradient-authority: linear-gradient(135deg, hsl(213 94% 68%), hsl(220 13% 91%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 84% 50%), hsl(213 94% 68%));
-    --gradient-dashboard: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 13% 96%));
+    /* Vibrant Gradients */
+    --gradient-emergency: linear-gradient(135deg, hsl(0 100% 67%), hsl(320 100% 70%));
+    --gradient-authority: linear-gradient(135deg, hsl(213 100% 70%), hsl(280 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 100% 67%), hsl(213 100% 70%), hsl(280 100% 70%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(200 100% 98%), hsl(280 100% 95%));
+    --gradient-success: linear-gradient(135deg, hsl(142 100% 50%), hsl(180 100% 60%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 100% 60%), hsl(25 100% 60%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(200 100% 98%));
+    --gradient-vibrant: linear-gradient(45deg, hsl(0 100% 67%), hsl(45 100% 60%), hsl(142 100% 50%), hsl(213 100% 70%), hsl(280 100% 70%));
 
-    /* Shadows */
-    --shadow-emergency: 0 10px 30px -10px hsl(0 84% 50% / 0.3);
-    --shadow-card: 0 4px 12px -2px hsl(223 47% 11% / 0.1);
-    --shadow-dashboard: 0 8px 25px -8px hsl(223 47% 11% / 0.15);
+    /* Enhanced Shadows */
+    --shadow-emergency: 0 20px 40px -10px hsl(0 100% 67% / 0.4);
+    --shadow-card: 0 8px 25px -8px hsl(213 100% 70% / 0.15);
+    --shadow-dashboard: 0 15px 35px -10px hsl(280 100% 70% / 0.2);
+    --shadow-vibrant: 0 25px 50px -12px hsl(0 100% 67% / 0.3);
+    --shadow-glow: 0 0 30px hsl(213 100% 70% / 0.5);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --pulse-emergency: pulse-emergency 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    /* Smooth Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --pulse-emergency: pulse-emergency 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
     --radius: 0.5rem;
 
@@ -134,14 +143,57 @@ All colors MUST be HSL.
   @keyframes pulse-emergency {
     0%, 100% {
       opacity: 1;
+      transform: scale(1);
     }
     50% {
-      opacity: 0.7;
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(213 100% 70% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(213 100% 70% / 0.6);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
     }
   }
 
   .emergency-pulse {
-    animation: pulse-emergency 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse-emergency 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-effect {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .shimmer-effect {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 
   .gradient-emergency {
@@ -160,6 +212,22 @@ All colors MUST be HSL.
     background: var(--gradient-dashboard);
   }
 
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .gradient-warning {
+    background: var(--gradient-warning);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-vibrant {
+    background: var(--gradient-vibrant);
+  }
+
   .shadow-emergency {
     box-shadow: var(--shadow-emergency);
   }
@@ -170,5 +238,40 @@ All colors MUST be HSL.
 
   .shadow-dashboard {
     box-shadow: var(--shadow-dashboard);
+  }
+
+  .shadow-vibrant {
+    box-shadow: var(--shadow-vibrant);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-vibrant);
+  }
+
+  .interactive-card {
+    transition: var(--transition-bounce);
+    cursor: pointer;
+  }
+
+  .interactive-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-vibrant);
   }
 }

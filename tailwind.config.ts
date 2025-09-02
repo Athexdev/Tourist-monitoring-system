@@ -68,6 +68,13 @@ export default {
 					DEFAULT: 'hsl(var(--authority))',
 					foreground: 'hsl(var(--authority-foreground))'
 				},
+				info: {
+					DEFAULT: 'hsl(var(--info))',
+					foreground: 'hsl(var(--info-foreground))'
+				},
+				'vibrant-purple': 'hsl(var(--vibrant-purple))',
+				'vibrant-orange': 'hsl(var(--vibrant-orange))',
+				'vibrant-cyan': 'hsl(var(--vibrant-cyan))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

@@ -9,25 +9,28 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 transition-smooth",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-smooth",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-smooth",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        emergency: "gradient-emergency shadow-emergency text-emergency-foreground hover:opacity-90 font-bold",
-        authority: "gradient-authority shadow-card text-authority-foreground hover:opacity-90",
-        warning: "bg-warning text-warning-foreground hover:bg-warning/90",
-        success: "bg-success text-success-foreground hover:bg-success/90",
-        panic: "gradient-emergency shadow-emergency text-emergency-foreground hover:opacity-90 font-bold text-lg emergency-pulse",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-smooth",
+        ghost: "hover:bg-accent hover:text-accent-foreground transition-smooth",
+        link: "text-primary underline-offset-4 hover:underline transition-smooth",
+        emergency: "gradient-emergency shadow-emergency text-emergency-foreground hover:opacity-90 font-bold hover-lift",
+        authority: "gradient-authority shadow-glow text-authority-foreground hover:opacity-90 hover-lift",
+        warning: "gradient-warning shadow-vibrant text-warning-foreground hover:opacity-90 hover-lift",
+        success: "gradient-success shadow-card text-success-foreground hover:opacity-90 hover-lift",
+        panic: "gradient-emergency shadow-emergency text-emergency-foreground hover:opacity-90 font-bold text-lg emergency-pulse hover-lift",
+        vibrant: "gradient-vibrant shadow-vibrant text-white hover:opacity-90 font-bold hover-lift shimmer-effect",
+        info: "bg-info text-info-foreground hover:bg-info/90 transition-bounce hover-lift",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
