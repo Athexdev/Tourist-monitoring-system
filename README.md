@@ -1,18 +1,10 @@
-# Welcome to your Lovable project
+# Welcome to Smart Tourist Safety Monitoring System
 
-## Project info
-
-**URL**: https://lovable.dev/projects/126774b7-3d62-4d35-bb3e-08ffc4013b9d
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/126774b7-3d62-4d35-bb3e-08ffc4013b9d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
