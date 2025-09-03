@@ -2,6 +2,7 @@ import { Shield, MapPin, AlertTriangle, UserCheck, Sparkles, Zap } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/india-wonders.webp";
 
 const HeroSection = () => {
@@ -49,13 +50,17 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button variant="vibrant" size="xl" className="font-bold shadow-vibrant">
-                <UserCheck className="h-6 w-6" />
-                Register as Tourist
+              <Button variant="vibrant" size="xl" className="font-bold shadow-vibrant" asChild>
+                <Link to="/register">
+                  <UserCheck className="h-6 w-6" />
+                  Register as Tourist
+                </Link>
               </Button>
-              <Button variant="authority" size="xl" className="font-bold">
-                <Shield className="h-6 w-6" />
-                Authority Dashboard
+              <Button variant="authority" size="xl" className="font-bold" asChild>
+                <Link to="/dashboard">
+                  <Shield className="h-6 w-6" />
+                  Authority Dashboard
+                </Link>
               </Button>
             </div>
             

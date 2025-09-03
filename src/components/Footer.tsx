@@ -1,5 +1,6 @@
 import { Shield, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,27 +42,30 @@ const Footer = () => {
           </div>
           
           <div className="space-y-4">
-            <h4 className="font-bold text-lg">Features</h4>
+            <h4 className="font-bold text-lg">Quick Links</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              <li>• Digital Tourist ID</li>
-              <li>• Panic Button</li>
-              <li>• Geo-fencing Alerts</li>
-              <li>• AI Anomaly Detection</li>
-              <li>• Real-time Monitoring</li>
-              <li>• Emergency Response</li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">• About SafeTour</Link></li>
+              <li><Link to="/register" className="hover:text-primary transition-colors">• Tourist Registration</Link></li>
+              <li><Link to="/dashboard" className="hover:text-primary transition-colors">• Authority Dashboard</Link></li>
+              <li><Link to="/emergency" className="hover:text-primary transition-colors">• Emergency Services</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">• Contact Support</Link></li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h4 className="font-bold text-lg">Quick Access</h4>
             <div className="space-y-3">
-              <Button variant="emergency" className="w-full">
-                <Phone className="h-4 w-4" />
-                Emergency Help
+              <Button variant="emergency" className="w-full" asChild>
+                <Link to="/emergency">
+                  <Phone className="h-4 w-4" />
+                  Emergency Help
+                </Link>
               </Button>
-              <Button variant="authority" className="w-full">
-                <Shield className="h-4 w-4" />
-                Authority Login
+              <Button variant="authority" className="w-full" asChild>
+                <Link to="/dashboard">
+                  <Shield className="h-4 w-4" />
+                  Authority Login
+                </Link>
               </Button>
             </div>
           </div>
