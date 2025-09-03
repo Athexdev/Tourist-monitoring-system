@@ -2,7 +2,7 @@ import { Shield, MapPin, AlertTriangle, UserCheck, Sparkles, Zap } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-safety.jpg";
+import heroImage from "@/assets/hero-taj-mahal.jpg";
 
 const HeroSection = () => {
   return (

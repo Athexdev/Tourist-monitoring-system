@@ -2,7 +2,7 @@ import { QrCode, Shield, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import digitalIdImage from "@/assets/digital-id.jpg";
+import digitalIdImage from "@/assets/indian-heritage.jpg";
 
 const DigitalIdSection = () => {
   return (
