@@ -16,10 +16,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Athexdev/Tourist-monitoring-system.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory.(create a folder or move to the redirected folder)
+cd <folder name>
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -54,7 +54,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/126774b7-3d62-4d35-bb3e-08ffc4013b9d) and click on Share -> Publish.
+Simply open [Athox_001](https://lovable.dev/projects/126774b7-3d62-4d35-bb3e-08ffc4013b9d) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
