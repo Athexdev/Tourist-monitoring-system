@@ -6,25 +6,23 @@ import heroImage from "@/assets/india-wonders.webp";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), 
-                           linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px',
-          animation: 'pulse 4s ease-in-out infinite'
-        }}></div>
-      </div>
+    <section 
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50" />
       
       {/* Dynamic Floating Elements */}
       <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-gradient-to-r from-blue-400 to-cyan-300 opacity-30 animate-bounce"></div>
       <div className="absolute top-40 right-20 w-20 h-20 rounded-full bg-gradient-to-r from-purple-400 to-pink-300 opacity-30 animate-pulse" style={{animationDelay: '2s'}}></div>
       <div className="absolute bottom-40 left-20 w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-blue-300 opacity-30 animate-bounce" style={{animationDelay: '4s'}}></div>
       <div className="absolute top-1/2 right-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-orange-400 to-red-300 opacity-20 animate-pulse" style={{animationDelay: '1s'}}></div>
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/30" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
